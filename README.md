@@ -1,4 +1,3 @@
 # max-fw.github.io
-html files rendered
 
-For the Open Research Quarto book, please see [https://max-fw.github.io/docs/](https://max-fw.github.io/docs/)
+This repo is currently used for testing the Open Research Quarto book - created for FORRT based on the Open University course. 
