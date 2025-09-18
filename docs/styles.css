@@ -1,0 +1,191 @@
+/* font to Domine - FORRT preferred font available on Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+.domine-<uniquifier> {
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+body {
+  background-color: #FEFDF6;
+  font-family: "Domine", sans-serif; 
+}
+
+
+/* breadcrumb make it disappear */
+ol.breadcrumb {display:none;}
+
+
+/* formatting images */ 
+
+.inline-figure { border: none; }
+
+figcaption {
+  margin: .5em;
+  text-align: center;
+}
+
+.shadedbox {
+  padding: 1.2em 2em 0.3em 2em;
+  background: #dee9e9;
+  color: #36454F;
+  border: 2px solid #4156561E;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+
+/* gray ones used in Glossary to point to FORRT Glossary */
+.shadedboxgray {
+  padding: 1em 1em 0em 1em;
+  background: #e1edf0;
+  color: #333333;
+  border: 1px solid #98c1d9;
+  border-radius: 10px;
+  width: 90%;
+}
+
+.forrt-icon {
+  background-image: url("assets/forrt-icon.png");
+}
+
+/* using html details tag for "Show / Hide Discussion" */
+
+details {
+  color: #315656; 
+  padding: 10px;
+  border: 3px solid #caebea; 
+}
+
+details > summary {
+/*  background-color: ; */
+  color: #315656; 
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1em;
+  text-align: center;
+}
+    
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > a {
+    color: #8e0000; 
+    text-decoration: none; 
+}
+
+a {
+    color: #8e0000; 
+    text-decoration: none; 
+}
+
+toc > a {
+    color: #8e0000; 
+}
+
+/* logo positioning in sidebar (left hand side) */
+
+.sidebar-logo {
+  margin-bottom: 30px;
+}
+
+/* colors of sidebar links */
+
+.sidebar-navigation {
+  background-color: #FEFDF6; 
+}
+
+.sidebar-title {
+  text-align: center;
+  margin-top: 1em;
+  padding-top: 1em;
+  color: black;
+} 
+
+.sidebar-item-text.sidebar-link {
+    line-height: 1.5;
+} 
+
+.sidebar-navigation a {color: #343a40;}
+
+.sidebar-navigation a:hover {
+      color: #8e0000; 
+    }
+
+.sidebar-item-text.sidebar-link.active {
+    color: #8e0000; 
+    font-weight: bold;
+}
+
+.cite {
+  border: none; 
+  background: #8e0000;
+  border-radius: 10px;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cite:hover {background: #c0dee5; color: #000500}
+
+/* add footer image */
+body {
+  position: relative; 
+  margin: 0;
+  padding: 0;
+}
+
+.smaller {font-size: 0.9em;}
+.smallest {font-size: 0.7em;}
+
+/* bottom navigation */
+
+.nav-page-previous {
+  /* padding: 8px 15px; */
+  text-decoration: none;
+}
+
+.nav-page-next {
+  /* padding: 8px 15px; */
+  text-decoration: none;
+} 
+    
+.nav-page-previous > a:hover {color: #8e0000; }
+.nav-page-next > a:hover {color: #8e0000; }
+.nav-footer {display:none;}
+
+/* style code block */
+
+pre, code {
+    font-family: "Domine", serif;
+    font-size: 1.2em;
+}
+
+code.sourceCode {
+      color: red;
+    }
+
+table {
+  display:inline-block;
+  width: 100%;
+}
+
+img {
+  vertical-align:middle;
+  margin: 7px 0 0 7px; 
+}
+
+.quarto-navigation-tool {display: none;}
