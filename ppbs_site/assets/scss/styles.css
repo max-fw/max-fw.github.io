@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700&display=swap');
+
+body{
+  font-family: 'Montserrat', 'Lora', sans-serif;
+  font-size: 11pt;
+  text-align: justify;
+}
+
+/* Person block with a floated headshot */
+.person {
+  margin: 2rem 0;
+  line-height: 1.7;
+}
+
+/* float the headshot so text wraps */
+.headshot {
+  float: left;
+  border-radius: 50%;
+  width: 130px;              /* tweak size as you like */
+  margin: 0 .9rem .4rem 0;   /* space to the right/below the image */
+}
+
+/* icons under the photo */
+.person .icons a {
+  margin-right: .5rem;
+  text-decoration: none;
+}
+
+/* clear the float at the end of each person block */
+.person::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* right-floated headshot (mirror of .headshot) */
+.headshot-right {
+  float: right;
+  border-radius: 50%;
+  width: 130px;               /* match Jasmin */
+  margin: 0 0 .4rem .9rem;    /* space to the left/below the image */
+}
+
+/* optional: right-align icons under a right-floated image */
+.icons-right { text-align: right; }
+
+.fa,
+.fab,
+.far,
+.fas,
+.ai,
+a > i {
+  border-bottom: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;  /* covers the edge case of custom underline styles */
+}
+
+.column-left-people a,
+.column-right-people a,
+.icons a,
+a .fa,
+a .fab,
+a .fas,
+a .far,
+a .ai {
+  border-bottom: none !important;
+  text-decoration: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* keep the same mobile behavior: stack on narrow screens */
+@media (max-width: 576px) {
+  .headshot-right {
+    float: none;
+    display: block;
+    margin: 0 auto .6rem auto;   /* center on mobile */
+  }
+}
+
+/* stack nicely on narrow screens */
+@media (max-width: 576px) {
+  .headshot {
+    float: none;
+    display: block;
+    margin: 0 auto .6rem auto;   /* center the image */
+  }
+}
+
+
+/* This change the style of the main container that wraps the whole R Markdown document. It allows the parallax image to be full width */
+.main-container {
+    max-width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Then we place our content with this style because we don't want it to be full width */
+.mycontent, .mycontentold{
+      max-width: 900px !important;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Montserrat';
+      font-size: 120%;
+      line-height: 1.7;
+      padding-right: 12px;
+      padding-left: 12px;
+}
+
+/* Just for fun, a bit of customization for title and text.. */
+.mytitle{
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-size: 80%;
+  font-weight: 250;
+  letter-spacing: 4px;
+}
+
+.mysubtitle{
+  color:grey;
+  font-family: 'Montserrat';
+}
+
+h1 {
+    padding-top: 65px !important;
+    margin-top: 30px !important;
+}
+
+h2.title {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/*hr {display: none !important;}*/
+
+pre {
+    border: 0px solid #cccccc;
+    border-radius: 0px;
+ }
+
+a {
+  color: #25a6bc;
+}
+
+/* Here is a CSS code for flat icons and text */
+
+.column-left{
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+.column-center{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+.column-right{
+  float: right;
+  width: 33%;
+  text-align: center;
+}
+
+.column-left-people{
+  float: left;
+  width: 30%;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 1px;
+}
+.column-right-people{
+  float: right;
+  width: 30%;
+  text-align: center;
+  padding-right: 1px;
+  padding-left: 20px;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* Here is a CSS code for 2 and 3 columns WITHOUT definition of what goes where*/
+
+.col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+.col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+
+pre.bluecars {
+    background-color: #aabbff !important;
+}
+pre.redcars {
+    background-color: #ff6bbc !important;
+}
+
+.person + .person { margin-top: 2.5rem; }   /* space between entries */
+.person .icons a { margin-right: .5rem; text-decoration: none; }
+
+/* Override Bootstrap's dark theme on navbar */
+.navbar[data-bs-theme="dark"] {
+  background-color: #111111 !important;
+  --bs-navbar-color: #FFFDF7 !important;
+  --bs-navbar-hover-color: #9cc63b !important;
+  --bs-navbar-active-color: #9cc63b !important;
+  --bs-navbar-brand-color: #FFFDF7 !important;
+}
+
+
+
+/* ----------------------------------------------*/
+/* Investigators page                         */ 
+/* ----------------------------------------------*/
+
+.person-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 36px;
+  margin: 48px 0;
+  flex-wrap: wrap;
+}
+
+.person-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.person-img {
+  min-width: 150px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.person-img img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.person-bio {
+  max-width: 600px;
+  font-size: 1.15rem;
+  text-align: left;
+  margin: 0 10px;
+}
+
+@media (max-width: 800px) {
+  .person-row, .person-row.reverse {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+  .person-bio {
+    text-align: center;
+  }
+}
+
+/* Remove underline/border for links containing only an icon */
+.person-row a,
+.person-row a:visited,
+.person-row a:active {
+  border-bottom: none !important;
+  text-decoration: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Also remove effects from the icon element itself */
+.person-row a i,
+.person-row a .fa,
+.person-row a .fab,
+.person-row a .far,
+.person-row a .fas,
+.person-row a .ai {
+  border: none !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+
+
+/* CONSTRUCTS PAGE*/
+
+.construct-block {
+                              /*background: #fbfbfd;*/
+  border: none;               /*1px solid #ddd*/
+  border-radius: 9px;
+  padding: 8px 24px 12px 24px;
+  margin-bottom: 32px;
+  box-shadow: none;            /*1px 1px 8px rgba(0,0,0,0.025)*/
+}
+.construct-block h1,
+.construct-block h2,
+.construct-block h3,
+.construct-block h4 {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.25em !important;
+}
+
+.subconstruct-card {
+  /*background: #f6f8fa;*/
+  border: 1px solid #25a6bc;
+  border-radius: 15px;
+  padding: 13px 18px 0px 18px;
+  margin-bottom: 11px;
+  margin-left: 0.6em;
+  /*box-shadow: 1px 1px 4px #25a6bc;*/
+}
+
+.person-img img {
+  transition: transform 0.18s cubic-bezier(.25,.8,.25,1), box-shadow 0.18s;
+  will-change: transform, box-shadow;
+}
+.person-img img:hover,
+.person-row:focus-within .person-img img {
+  transform: scale(1.015); /* just 1.5% larger */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+/* hide email envelop icon & mailto links temporarily - subject to FA confirmation */
+/* a.fa-envelope, 
+ .fa-envelope { */
+/*  display: none !important; */
+/* } */
+
+a.fa-envelope:not(.keep-envelope),
+.fa-envelope:not(.keep-envelope) {
+  display: none !important;
+}
+
+
+/* HANGING INDENT */
+
+.hangingindent {
+  padding-left: 2em;    /* Indent for all lines */
+  text-indent: -2em;    /* Negative indent for the first line */
+}
+
+/* Remove border/lines under Quarto section headings */
+.quarto-title-block .quarto-title,
+h1, h2, h3, h4, h5, h6 {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
